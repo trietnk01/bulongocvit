@@ -23,34 +23,34 @@
         font-size: 14px;
         text-transform: uppercase;
         background: transparent;
-        padding: 40px 15px;
+        padding: 12px 15px;
         border-right: 0;
+        background-image: url('../images/bg_sep_menu.png');
+        background-repeat: no-repeat;
+        background-position:right center;
         @media(max-width: 1024px){
           padding: 40px 10px;
           font-size: 12px;
         }
         &:link,&:visited{
-          color: $mau_1;
+          color: #fff;
         }
         &:hover,&.selected{
-          color: $mau_1;
-          background:transparent !important;
-        }
-      }
-      &:nth-child(5){
-        a{
-          padding-left: 140px;
-        }
-      }
-      &:last-child{
-        a{
-          border-right: 0;
+          color: #fff;
+          background: #fcee1f;
+          color: $mau;
+          background-image: url('../images/bg_sep_menu.png') !important;
+          background-repeat: no-repeat;
+          background-position:right center;
         }
       }
       &.current-menu-item{
         >a{
           background:transparent;
-          color: #45b3de;
+          color: #fcee1f;
+          background-image: url('../images/bg_sep_menu.png');
+          background-repeat: no-repeat;
+          background-position:right center;
         }
       }
     }

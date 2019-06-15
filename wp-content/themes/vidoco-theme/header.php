@@ -34,96 +34,56 @@ $permalink_search_product=get_permalink( $page_id_search_product);
 <body >
 	<!-- begin fanpage -->
 	<div id="fb-root"></div>
-<script async defer crossorigin="anonymous" src="https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v3.3&appId=1994326743991661&autoLogAppEvents=1"></script>
+	<script async defer crossorigin="anonymous" src="https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v3.3&appId=1994326743991661&autoLogAppEvents=1"></script>
 	<!-- end fanpage -->
 	<header>
-		<div class="thay-pin-danh-bong-dong-ho">
-			<div class="container">
-				<div class="row">
-					<div class="col">
-						<div class="rana">
-							THAY PIN ,ĐÁNH BÓNG ĐỒNG HỒ MIỄN PHÍ TRỌN ĐỜI.NHẬN SHIP COD TOÀN QUỐC.
-						</div>
-						<div class="gio-hang">
-							<a href="<?php echo @$cart_link; ?>">
-								<span><i class="fas fa-shopping-cart"></i></span>
-								<span>Giỏ hàng</span>
-								<span class="cart-total"><?php echo @$quantity; ?></span>
-							</a>
-						</div>
-						<div class="kinh-lup">
-							<a href="javascript:void(0);" onclick="showFrmSearch();"><i class="fas fa-search"></i></a>
-						</div>
+		<div class="container box-header-bg">
+			<div class="row">
+				<div class="col-md-4">
+					<a href="<?php echo site_url( '',null ); ?>">
+						<img src="<?php echo get_field("setting_thong_tin_chung_favicon","option"); ?>">
+					</a>
+				</div>
+				<div class="col-md-4">
+					<div class="hotline-label">Hotline</div>
+					<div class="hotline-real"><span class="phone-square"><i class="fas fa-phone-volume"></i></span><span class="hotline-real2">0986 068 715/ 0982 83 1985</span></div>
+					<div class="hotline-mailto"><span class="envelope"><i class="far fa-envelope"></i></span> <a href="mailto:<?php echo get_field("setting_thong_tin_chung_email","option"); ?>"><?php echo get_field("setting_thong_tin_chung_email","option"); ?></a></div>
+				</div>
+				<div class="col-md-4">
+					<form class="tim-kiem-sp" name="frm_tim_kiem_sp" action="<?php echo @$permalink_search_product; ?>" method="POST">
+						<div class="tim-kiem-txt"><input type="text" name="q" autocomplete="off" placeholder="Từ khóa tìm kiếm" value="<?php echo @$q; ?>"></div>
+						<div class="btn-search-product"><a href="javascript:void(0);" onclick="document.forms['frm_tim_kiem_sp'].submit();"><i class="fas fa-search"></i></a></div>
+					</form>
+				</div>
+			</div>
+			<div class="row margin-top-15">
+				<div class="col">
+					<div id="smoothmainmenu" class="ddsmoothmenu">
+						<?php
+						$args = array(
+							'menu'              => '',
+							'container'         => '',
+							'container_class'   => '',
+							'container_id'      => '',
+							'menu_class'        => 'main-menu',
+							'echo'              => true,
+							'fallback_cb'       => 'wp_page_menu',
+							'before'            => '',
+							'after'             => '',
+							'link_before'       => '',
+							'link_after'        => '',
+							'items_wrap'        => '<ul id="%1$s" class="%2$s">%3$s</ul>',
+							'depth'             => 3,
+							'walker'            => '',
+							'theme_location'    => 'primary' ,
+							'menu_li_actived'       => 'current-menu-item',
+							'menu_item_has_children'=> 'menu-item-has-children',
+						);
+						wp_nav_menu($args);
+						?>
+						<div class="clr"></div>
 					</div>
 				</div>
 			</div>
-		</div>
-		<div class="menu-bg">
-			<div class="container">
-				<div class="row">
-					<div class="col">
-						<div id="smoothmainmenu" class="ddsmoothmenu">
-							<?php
-							$args = array(
-								'menu'              => '',
-								'container'         => '',
-								'container_class'   => '',
-								'container_id'      => '',
-								'menu_class'        => 'main-menu',
-								'echo'              => true,
-								'fallback_cb'       => 'wp_page_menu',
-								'before'            => '',
-								'after'             => '',
-								'link_before'       => '',
-								'link_after'        => '',
-								'items_wrap'        => '<ul id="%1$s" class="%2$s">%3$s</ul>',
-								'depth'             => 3,
-								'walker'            => '',
-								'theme_location'    => 'primary' ,
-								'menu_li_actived'       => 'current-menu-item',
-								'menu_item_has_children'=> 'menu-item-has-children',
-							);
-							wp_nav_menu($args);
-							?>
-						</div>
-						<div class="logo">
-							<a href="<?php echo site_url( '', null ); ?>">
-								<img src="<?php echo get_field("setting_thong_tin_chung_favicon","option"); ?>" width="60">
-							</a>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="mobile-navbar">
-			<nav class="navbar navbar-expand-lg navbar-light bg-light">
-				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-					<span class="navbar-toggler-icon"></span>
-				</button>
-				<div class="collapse navbar-collapse" id="navbarSupportedContent">
-					<?php
-					$args = array(
-						'menu'              => '',
-						'container'         => '',
-						'container_class'   => '',
-						'container_id'      => '',
-						'menu_class'        => 'mobile-menu',
-						'echo'              => true,
-						'fallback_cb'       => 'wp_page_menu',
-						'before'            => '',
-						'after'             => '',
-						'link_before'       => '',
-						'link_after'        => '',
-						'items_wrap'        => '<ul id="%1$s" class="%2$s">%3$s</ul>',
-						'depth'             => 3,
-						'walker'            => '',
-						'theme_location'    => 'primary' ,
-						'menu_li_actived'       => 'current-menu-item',
-						'menu_item_has_children'=> 'menu-item-has-children',
-					);
-					wp_nav_menu($args);
-					?>
-				</div>
-			</nav>
 		</div>
 	</header>
