@@ -53,6 +53,26 @@ header{
 		.ddsmoothmenu{
 			background: $mau_1;
 			border-radius: 10px 10px 0 0;
+			@media(max-width: 992px){
+				display: none;
+			}
+		}
+		.mobile-navbar{
+			display: none;
+			@media(max-width: 992px){
+				display: block;
+			}
+			.mobile-menu{
+				list-style: none;
+				padding: 0 22px;
+				li{
+					a{
+						color: #fff;
+						display: block;
+						padding: 5px 0px;
+					}
+				}
+			}
 		}
 	}
 }
@@ -93,6 +113,9 @@ header{
 			font-size: 15px;
 			padding: 10px 10px;
 			font-family: $f_bold;
+			@media(max-width: 1024px){
+				font-size: 13px;
+			}
 		}
 		.dmsp-lst{
 			list-style: none;
@@ -140,6 +163,9 @@ header{
 			font-size: 15px;
 			padding: 10px 10px;
 			font-family: $f_bold;
+			@media(max-width: 1024px){
+				font-size: 13px;
+			}
 		}
 		.main-product-box{
 			padding-top: 20px;
@@ -188,6 +214,9 @@ header{
 								padding: 10px 14px;
 								border-radius: 20px;
 							}
+						}
+						.box-product-featured-img{
+							text-align: center;
 						}
 						&:hover{
 							.panel-top-to-bottom{
@@ -335,6 +364,14 @@ header{
 			}
 		}
 	}
+	.catalog-box{
+		border: 1px solid #d8d8d8;
+		margin-top: 20px;
+		a{
+			display: block;
+			text-align: center;
+		}
+	}
 	.cac-dich-vu-chinh{
 		font-family: $f_bold;
 		font-size: 22px;
@@ -344,6 +381,232 @@ header{
 		margin-top: 20px;
 		@media(max-width: 240px){
 			font-size: 20px;
+		}
+	}
+	.box-right{
+		margin-top: 20px;
+		.bx-right-h{
+			background:$mau_1;
+			color: #ffffff;
+			text-transform: uppercase;
+			font-size: 15px;
+			padding: 10px 10px;
+			font-family: $f_bold;
+			@media(max-width: 1024px){
+				font-size: 13px;
+			}
+		}
+		.bx-right-wrapper{
+			border-bottom: 1px solid #d8d8d8;
+			border-left: 1px solid #d8d8d8;
+			border-right: 1px solid #d8d8d8;
+			padding-top: 10px;
+			padding-left: 10px;
+			padding-right: 10px;
+			text-align: justify;
+			.roda-mau-thiet-ke{
+				margin-bottom: 20px;
+				.mau-thiet-ke-left{
+					float: left;
+					width: 35%;
+					@media(max-width: 1024px){
+						width: 100%;
+					}
+					.box-oc-bu-img{
+						border: 1px solid #d8d8d8 ;
+						a{
+							display: block;
+							overflow: hidden;
+							position: relative;
+							.panel-top-to-bottom{
+								position: absolute;
+								top: -100%;
+								left: 0;
+								width: 100%;
+								height: 100%;
+								background: #000;
+								opacity:0.1;
+								@include p-web(transition,all 0.5s);
+							}
+							.panel-bottom-to-top{
+								position: absolute;
+								bottom: -100%;
+								left: 0;
+								width: 100%;
+								height: 100%;
+								background: #000;
+								opacity:0.1;
+								@include p-web(transition,all 0.5s);
+							}
+							.panel-link{
+								position: absolute;
+								top: 0;
+								left: 0;
+								width: 100%;
+								height: 100%;
+								display: flex;
+								align-items: center;
+								justify-content: center;
+								opacity:0;
+								@include p-web(transition,all 0.5s);
+								.panel-circle{
+									background: #fff;
+									color: #000;
+									padding: 10px 14px;
+									border-radius: 20px;
+								}
+							}
+							.box-product-featured-img{
+								text-align: center;
+							}
+							&:hover{
+								.panel-top-to-bottom{
+									top: 0;
+								}
+								.panel-bottom-to-top{
+									bottom: 0;
+								}
+								.panel-link{
+									opacity:0.8;
+								}
+							}
+						}
+					}
+				}
+				.mau-thiet-ke-right{
+					float: left;
+					width:60%;
+					margin-left: 10px;
+					@media(max-width: 1024px){
+						width: 100%;
+						margin-left: 0;
+					}
+					.mau-thiet-ke-right-h4{
+						line-height: 16px;
+						@media(max-width: 1024px){
+							margin-top: 10px;
+						}
+						a{
+							color: $mau;
+							font-size: 14px;
+							font-family: $f_light;
+							&:hover{
+								color: $mau_1;
+							}
+						}
+					}
+					.icon-heart{
+						font-size: 14px;
+					}
+				}
+			}
+			.box-oc-vit-bulong-item{
+				margin-bottom: 40px;
+				.box-oc-bu-img{
+					border: 1px solid #d8d8d8 ;
+					a{
+						display: block;
+						overflow: hidden;
+						position: relative;
+						.panel-top-to-bottom{
+							position: absolute;
+							top: -100%;
+							left: 0;
+							width: 100%;
+							height: 100%;
+							background: #000;
+							opacity:0.1;
+							@include p-web(transition,all 0.5s);
+						}
+						.panel-bottom-to-top{
+							position: absolute;
+							bottom: -100%;
+							left: 0;
+							width: 100%;
+							height: 100%;
+							background: #000;
+							opacity:0.1;
+							@include p-web(transition,all 0.5s);
+						}
+						.panel-link{
+							position: absolute;
+							top: 0;
+							left: 0;
+							width: 100%;
+							height: 100%;
+							display: flex;
+							align-items: center;
+							justify-content: center;
+							opacity:0;
+							@include p-web(transition,all 0.5s);
+							.panel-circle{
+								background: #fff;
+								color: #000;
+								padding: 10px 14px;
+								border-radius: 20px;
+							}
+						}
+						.box-product-featured-img{
+							text-align: center;
+						}
+						&:hover{
+							.panel-top-to-bottom{
+								top: 0;
+							}
+							.panel-bottom-to-top{
+								bottom: 0;
+							}
+							.panel-link{
+								opacity:0.8;
+							}
+						}
+					}
+				}
+				.box-oc-bu-title{
+					margin-top: 10px;
+					a{
+						font-size: 12px;
+						color: #111;
+						font-family: $f_bold;
+						display: block;
+						text-align: center;
+					}
+				}
+				.gia-lien-he{
+					text-align: center;
+					margin-top: 5px;
+					.gia-1{
+						font-family: $f_bold;
+					}
+					.lien-he-1{
+						margin-left:5px;
+						color: $mau_1;
+						font-family: $f_bold;
+					}
+				}
+			}
+		}
+	}
+	.nika{
+		background-image: linear-gradient(#E2E2E2,#fff);
+		margin-top: 15px;
+		border: 1px solid #d8d8d8 ;
+		.owl-carousel-brand{
+			.item{
+				padding-top: 10px;
+				padding-bottom: 10px;
+				padding-left: 10px;
+				padding-right: 10px;
+			}
+		}
+	}
+	footer{
+		background: #004F8D;
+		padding:10px;
+		margin-top: 10px;
+		.slogan-info{
+			color: #fff;
+			text-align: justify;
 		}
 	}
 }
