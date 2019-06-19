@@ -85,11 +85,265 @@ header{
 		}
 	}
 	.box-dmsp{
+		margin-top: 20px;
 		.dmsp-h{
-
+			background: $mau_1;
+			color: #ffffff;
+			text-transform: uppercase;
+			font-size: 15px;
+			padding: 10px 10px;
+			font-family: $f_bold;
 		}
 		.dmsp-lst{
-
+			list-style: none;
+			padding-left: 0;
+			margin-bottom: 0;
+			li{
+				a{
+					border-bottom: 1px solid #d8d8d8;
+					border-left: 1px solid #d8d8d8;
+					border-right: 1px solid #d8d8d8;
+					display: block;
+					padding: 5px 25px;
+					color: $mau;
+					background-image: url('../images/square-menu.jpg') ;
+					background-repeat: no-repeat;
+					background-position: 10px center;
+					&:hover{
+						background-image: url('../images/square-menu.jpg') ;
+						background-repeat: no-repeat;
+						background-position: 10px center;
+						background-color: #d0d0d0;
+					}
+				}
+			}
+		}
+		#mvcwid{
+			border-bottom: 1px solid #d8d8d8;
+			border-left: 1px solid #d8d8d8;
+			border-right: 1px solid #d8d8d8;
+		}
+		.rio-box{
+			border-bottom: 1px solid #d8d8d8;
+			border-left: 1px solid #d8d8d8;
+			border-right: 1px solid #d8d8d8;
+			padding:10px;
+			text-align: justify;
+		}
+	}
+	.dssp-box{
+		margin-top: 20px;
+		.dssp-h{
+			background: $mau_1;
+			color: #ffffff;
+			text-transform: uppercase;
+			font-size: 15px;
+			padding: 10px 10px;
+			font-family: $f_bold;
+		}
+		.main-product-box{
+			padding-top: 20px;
+			.box-oc-vit-bulong-item{
+				margin-bottom: 40px;
+				.box-oc-bu-img{
+					border: 1px solid #d8d8d8 ;
+					a{
+						display: block;
+						overflow: hidden;
+						position: relative;
+						.panel-top-to-bottom{
+							position: absolute;
+							top: -100%;
+							left: 0;
+							width: 100%;
+							height: 100%;
+							background: #000;
+							opacity:0.1;
+							@include p-web(transition,all 0.5s);
+						}
+						.panel-bottom-to-top{
+							position: absolute;
+							bottom: -100%;
+							left: 0;
+							width: 100%;
+							height: 100%;
+							background: #000;
+							opacity:0.1;
+							@include p-web(transition,all 0.5s);
+						}
+						.panel-link{
+							position: absolute;
+							top: 0;
+							left: 0;
+							width: 100%;
+							height: 100%;
+							display: flex;
+							align-items: center;
+							justify-content: center;
+							opacity:0;
+							@include p-web(transition,all 0.5s);
+							.panel-circle{
+								background: #fff;
+								color: #000;
+								padding: 10px 14px;
+								border-radius: 20px;
+							}
+						}
+						&:hover{
+							.panel-top-to-bottom{
+								top: 0;
+							}
+							.panel-bottom-to-top{
+								bottom: 0;
+							}
+							.panel-link{
+								opacity:0.8;
+							}
+						}
+					}
+				}
+				.box-oc-bu-title{
+					margin-top: 10px;
+					a{
+						font-size: 12px;
+						color: #111;
+						font-family: $f_bold;
+						display: block;
+						text-align: center;
+					}
+				}
+			}
+		}
+	}
+	.support-online-box{
+		background-color: #f1f3f4;
+		border-radius: 10px;
+		position: relative;
+		margin-top: 20px;
+		padding-bottom: 20px;
+		@media(max-width: 740px){
+			text-align: center;
+		}
+		.ho-tro-tot{
+			background-image: url('../images/ho-tro-truc-tuyen.png');
+			background-repeat: no-repeat;
+			background-size: cover;
+			padding-top: calc(100% / ( 260 / 212 ));
+			position: relative;
+			.httt{
+				position: absolute;
+				top: 105px;
+				left: 0;
+				width: 100%;
+				padding: 0px 20px;
+				@media(max-width: 992px){
+					top: 90px;
+				}
+				@media(max-width: 320px){
+					top: 40px;
+				}
+				.ho-tro{
+					font-family: $f_regular;
+					font-size: 16px;
+					color: #ffffff;
+					text-transform: uppercase;
+					@media(max-width: 740px){
+						font-size: 25px;
+					}
+				}
+				.truc-tuyen{
+					font-family: $f_bold;
+					font-size: 26px;
+					color: #ffffff;
+					text-transform: uppercase;
+					@media(max-width: 992px){
+						font-size: 20px;
+					}
+					@media(max-width: 740px){
+						font-size: 35px;
+					}
+					@media(max-width: 240px){
+						font-size: 25px;
+					}
+				}
+			}
+		}
+		.support-hotline{
+			margin-top: 10px;
+			text-align: center;
+			margin-left: auto;
+			margin-right: auto;
+			width: 225px;
+			@media(max-width: 240px){
+				width: 180px;
+			}
+			.support-phone-icon{
+				float: left;
+				margin-top: 8px;
+			}
+			.support-phone-number{
+				float: left;
+				font-family: $f_bold;
+				font-size: 26px;
+				color: #000;
+				margin-left: 10px;
+				@media(max-width: 240px){
+					font-size: 20px;
+					margin-top: 5px;
+				}
+			}
+		}
+		.call-skype-viber-zalo{
+			font-family: $f_regular;
+			font-size: 16px;
+			text-align: center;
+			margin-top: 10px;
+			color: #000000;
+			padding: 0px 20px;
+			@media(max-width: 240px){
+				font-size: 14px;
+				padding: 0px 10px;
+			}
+		}
+		.support-email{
+			margin-top: 10px;
+			padding: 0 10px;
+			text-align: center;
+			a{
+				font-family: $f_regular;
+				font-size: 16px;
+				color: #000000;
+				@media(max-width: 240px){
+					font-size: 12px;
+				}
+			}
+		}
+		.cara-call-skype-viber-zalo{
+			text-align: center;
+			margin-top: 10px;
+			padding: 0px 20px;
+			.skype-icon{
+				float: left;
+			}
+			.viber-icon{
+				float: left;
+				margin-left: 10px;
+			}
+			.zalo-icon{
+				float: left;
+				margin-left: 10px;
+			}
+		}
+	}
+	.cac-dich-vu-chinh{
+		font-family: $f_bold;
+		font-size: 22px;
+		color: #000;
+		text-align: center;
+		text-transform: uppercase;
+		margin-top: 20px;
+		@media(max-width: 240px){
+			font-size: 20px;
 		}
 	}
 }
