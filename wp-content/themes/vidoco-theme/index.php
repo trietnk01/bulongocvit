@@ -76,6 +76,7 @@
                                                 </div>
                                                 <?php
                                             }
+                                            wp_reset_postdata();
                                         }
                                         $k++;
                                         if($k%3 == 0 || $k==count(@$hp_zaproduct_rpt)){
