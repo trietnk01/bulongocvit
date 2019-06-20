@@ -73,7 +73,6 @@ $source_term_id=array();
                 <meta itemprop="datePublished" content="2015-02-05T08:00:00+08:00" style="display: none;" />
                 <meta itemprop="dateModified" content="2015-02-05T09:20:00+08:00" style="display: none;" />
                 <!-- end schema -->
-                <div class="post-date-post"><?php echo @$date_post; ?></div>
                 <?php
                 if(!empty(@$excerpt)){
                     ?>
