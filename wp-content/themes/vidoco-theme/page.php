@@ -9,18 +9,23 @@ $content="";
 $featured_img="";
 $source_term_id=array();
 ?>
-<div class="box-breadcrumb">
-    <div class="container">
-        <div class="row">
-            <div class="col">
-                <?php include get_template_directory()."/block/block-breadcrumb.php"; ?>
-            </div>
+<div class="container box-index">
+    <div class="row">
+        <div class="col">
+            <?php include get_template_directory()."/block/block-banner.php"; ?>
         </div>
     </div>
-</div>
-<div class="container single-post-taka">
     <div class="row">
-        <div class="col-md-8">
+        <div class="col-lg-3">
+            <?php
+            include get_template_directory()."/block/block-category-menu-product.php";
+            if(is_active_sidebar( "xt_counter_visitor" )) {
+                dynamic_sidebar( "xt_counter_visitor" );
+            }
+            include get_template_directory()."/block/block-about-us.php";
+            ?>
+        </div>
+        <div class="col-lg-6">
             <?php
             if(have_posts()){
                 while (have_posts()) {
@@ -89,57 +94,9 @@ $source_term_id=array();
                 ?>
             </div>
         </div>
-        <div class="col-md-4">
-            <?php
-            $args = array(
-                'post_type' => 'post',
-                'orderby' => 'id',
-                'order'   => 'DESC',
-                'posts_per_page' => 6,
-            );
-            $the_query_related_news=new WP_Query($args);
-            if($the_query_related_news->have_posts()){
-                ?>
-                <div class="box-news-related">
-                    <?php
-                    while($the_query_related_news->have_posts()){
-                        $the_query_related_news->the_post();
-                        $post_id=$the_query_related_news->post->ID;
-                        $permalink=get_the_permalink(@$post_id);
-                        $title=get_the_title(@$post_id);
-                        $date_post=get_the_date( 'd/m/Y', @$post_id );
-                        $excerpt=get_the_excerpt(@$post_id);
-                        $featured_img=get_the_post_thumbnail_url(@$post_id, 'full');
-                        ?>
-                        <div class="box-item-news box-ba-pr">
-                            <div class="box-item-news-img">
-                                <a href="<?php echo @$permalink; ?>">
-                                    <img src="<?php echo @$featured_img; ?>" alt="<?php echo @$title; ?>">
-                                    <div class="panel-top-to-bottom"></div>
-                                    <div class="panel-bottom-to-top"></div>
-                                    <div class="panel-link">
-                                        <div class="panel-circle">
-                                            <i class="fas fa-link"></i>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-                            <h3 class="box-item-news-title"><a href="<?php echo @$permalink; ?>"><?php echo wp_trim_words(@$title, 25,"[...]" ); ?></a></h3>
-                            <div class="box-item-news-excerpt">
-                                <?php echo wp_trim_words( @$excerpt,55,"[...]" ); ?>
-                            </div>
-                        </div>
-                        <?php
-                    }
-                    wp_reset_postdata();
-                    ?>
-                </div>
-                <?php
-            }
-            ?>
+        <div class="col-lg-3">
+            <?php include get_template_directory()."/block/block-right-sidebar.php"; ?>
         </div>
-    </div>
-</div>
-<?php
-get_footer();
-?>
+        <?php
+        get_footer();
+        ?>
