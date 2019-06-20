@@ -717,62 +717,60 @@ header{
 			padding: 10px 10px;
 			font-family: $f_bold;
 		}
-		.box-contact{
-			.frm-contact{
-				margin-top: 30px;
-				.ck-contact{
-					margin-top: 5px;
-					input{
-						border:1px solid #cacaca;
-						border-radius:0;
-						outline: 0;
-					}
-					textarea{
-						border:1px solid #cacaca;
-						border-radius:0;
-						outline: 0;
-					}
+		.frm-contact{
+			margin-top: 30px;
+			.ck-contact{
+				margin-top: 5px;
+				input{
+					border:1px solid #cacaca;
+					border-radius:0;
+					outline: 0;
 				}
-				.ck-submit{
-					margin-top: 10px;
-					a{
-						color: $mau_1;
-						padding:5px 20px;
-						text-transform: uppercase;
-						position: relative;
-						overflow: hidden;
-						z-index: 1;
-						float: left;
-						border:2px solid $mau_1;
-						font-family: $f_bold;
-						&:before{
-							content: '';
-							position: absolute;
-							top: 0;
-							left: 100%;
-							width: 100%;
-							height: 100%;
-							background:$mau_1;
-							z-index: -1;
-							@include p-web(transition, all 0.5s);
-						}
-						&:hover{
-							&:before{
-								left: 0;
-							}
-							color: #fff;
-						}
-					}
+				textarea{
+					border:1px solid #cacaca;
+					border-radius:0;
+					outline: 0;
 				}
 			}
-			.contact-intro{
-				text-align: justify;
+			.ck-submit{
 				margin-top: 10px;
-			}
-			.contact-info{
-				.icon-fontawesome{
+				a{
 					color: $mau_1;
+					padding:5px 20px;
+					text-transform: uppercase;
+					position: relative;
+					overflow: hidden;
+					z-index: 1;
+					float: left;
+					border:2px solid $mau_1;
+					font-family: $f_bold;
+					&:before{
+						content: '';
+						position: absolute;
+						top: 0;
+						left: 100%;
+						width: 100%;
+						height: 100%;
+						background:$mau_1;
+						z-index: -1;
+						@include p-web(transition, all 0.5s);
+					}
+					&:hover{
+						&:before{
+							left: 0;
+						}
+						color: #fff;
+					}
 				}
+			}
+		}
+		.contact-intro{
+			text-align: justify;
+			margin-top: 10px;
+		}
+		.contact-info{
+			.icon-fontawesome{
+				color: $mau_1;
 			}
 		}
 	}

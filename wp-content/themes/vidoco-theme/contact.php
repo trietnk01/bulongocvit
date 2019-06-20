@@ -29,8 +29,7 @@ get_header();
 						<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.562572449412!2d106.66927021474888!3d10.76815629232717!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752edc7f5620b9%3A0x4ca12cc2952b2cea!2zU8awIFbhuqFuIEjhuqFuaCwgSOG7kyBDaMOtIE1pbmgsIFZp4buHdCBOYW0!5e0!3m2!1svi!2s!4v1558410371443!5m2!1svi!2s" width="100%" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
 					</div>
 				</div>
-				<div class="box-contact">
-					<div class="row">
+				<div class="row">
 						<div class="col">
 							<div class="contact-intro">
 								<?php echo get_field("setting_thong_tin_chung_loi_mo_dau","option"); ?>
@@ -64,7 +63,6 @@ get_header();
 							</form>
 						</div>
 					</div>
-				</div>
 			</div>
 		</div>
 		<div class="col-lg-3">
